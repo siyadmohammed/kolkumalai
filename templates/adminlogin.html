@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adminloginklmyadv</title>
+    <link rel="stylesheet" href="{% static 'adminloginsheet.css'%}">
+</head>
+<body>
+<div id="login-page">
+  <div class="login">
+    <h2 class="login-title">Login</h2>
+    <p class="notice">Admin please login to access the system</p>
+    <form class="form-login" action="/adminlogincheck/" method="POST">{% csrf_token%}
+      <label for="email">Username</label>
+      <div class="input-email">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" name="username" placeholder="Enter your username" required>
+      </div>
+      <label for="password">Password</label>
+      <div class="input-password">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="checkbox">
+        <label for="remember">
+          <input type="checkbox" name="remember">
+          Remember me
+        </label>
+      </div>
+      <button type="submit"><i class="fas fa-door-open"></i> Sign in</button>
+    </form>
+      <a href="#">Forgot your password?</a>
+  </div>
+  <div class="background">
+    <h1>"The best way to predict the future is to create it."</h1>
+  </div>
+</div>
+</body>
+</html>
+

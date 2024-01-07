@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guest enquiries</title>
+    <style>
+        table, th, td
+        {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+        td{
+        text-align:center;
+        }
+    </style>
+</head>
+<body>
+<h1>Guest Enquiries</h1>
+<table>
+    <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    </tr>
+    {% for b in f%}
+    <tr>
+        <td>{{b.Name}}</td>
+        <td>{{b.Email}}</td>
+        <td>{{b.Message}}</td>
+        <td><a href="/deletedata/{{d.id}}">Delete</a></td>
+    </tr>
+    {% endfor%}
+</table>
+</body>
+</html>
